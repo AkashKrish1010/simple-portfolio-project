@@ -1,0 +1,200 @@
+.projects-container {
+  padding: 80px 20px;
+  background-color: white;
+  min-height: 100vh;
+  color: black;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.projects-header h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  font-family: 'GalasFont', sans-serif;
+  color: black;
+}
+
+.projects-header p {
+  font-size: 1.5rem;
+  font-family: 'Teko', sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  color: black;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.project-card {
+  background: white;
+  border: 4px solid black;
+  border-radius: 5px;
+  padding: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.485);
+}
+
+.project-card:hover {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.392);
+}
+
+.project-icon {
+  background: black;
+  padding: 30px;
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+  border-bottom: 4px solid black;
+}
+
+.project-content {
+  padding: 30px;
+}
+
+.project-status {
+  display: inline-block;
+  background: black;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: 'Teko', sans-serif;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: black;
+  font-family: 'Teko', sans-serif;
+}
+
+.project-card p {
+  margin-bottom: 20px;
+  color: black;
+  line-height: 1.6;
+  font-family: 'Teko', sans-serif;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.tech-tag {
+  background: white;
+  color: black;
+  border: 2px solid black;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: 'Teko', sans-serif;
+}
+
+.project-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 20px;
+  background: black;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  border: 4px solid black;
+  font-family: 'Teko', sans-serif;
+}
+
+.project-link:hover {
+  background: white;
+  color: black;
+  border: 4px solid black;
+}
+
+.projects-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.cta-card {
+  background: white;
+  border: 4px solid black;
+  padding: 40px;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 500px;
+  transition: all 0.3s ease;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.485);
+}
+
+.cta-card:hover {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.392);
+}
+
+.cta-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: black;
+  font-family: 'Teko', sans-serif;
+}
+
+.cta-card p {
+  color: black;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-family: 'Teko', sans-serif;
+}
+
+.cta-button {
+  background: black;
+  color: white;
+  border: 4px solid black;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-family: 'Teko', sans-serif;
+}
+
+.cta-button:hover {
+  background: white;
+  color: black;
+  border: 4px solid black;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .projects-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .project-content {
+    padding: 20px;
+  }
+}

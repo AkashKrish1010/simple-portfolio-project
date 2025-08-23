@@ -1,0 +1,673 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'GalasFont';
+    src: url('./assets/fonts/Galas.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Teko';
+    src: url('./assets/fonts/Teko-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LightFont';
+    src: url('./assets/fonts/Teko-Light.ttf') format('truetype');
+}
+html{
+    scroll-behavior: smooth;
+}
+/* For modern browsers */
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+#aksh{
+    display: flex;
+    gap: 0px;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:0;
+    font-family: 'teko';
+    padding:  20px 80px;
+    box-shadow: 0 4px  10px  rgba(0, 0, 0, 0.207);
+    background-color:white;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    font-family: 'teko';
+    position: relative;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 700;
+    color: black;   
+    transition: 0.3s ease;
+}
+#navbar li a:hover{
+    color: #088178;
+}
+#navbar li a:hover,#navbar li a.active{
+    color:#088178;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    left:20px;
+    background: black;
+    position: absolute;
+    bottom: 1px;
+
+}
+#profile{
+    width: 30%;
+    display: flex;
+    gap:20px;
+    text-align: left;
+}
+
+#profile img{
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    padding: 3px;
+    border-radius: 60%;
+}
+
+#ak:hover{
+    color: #088178;
+    cursor: pointer;
+}
+
+#ak {
+    padding: 3px;
+    font-size: 25px;
+    color:black;
+    transition: 0.3s ease;
+    
+}
+body {
+    background-color: white;
+    background-size: cover;
+    color: rgba(255, 255, 255, 0.964);
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.evry {
+    margin: auto;
+    color: rgba(255, 255, 255, 0.964);
+}
+#about {
+    width:50%;
+    display: flex;
+    color: black;
+    font-family: 'teko';
+    font-size: 2.7rem;
+    padding-top: 0px;
+    padding: 5px;
+    margin-top: 0px;
+    margin-left: 100px;
+    text-align: justify;
+}
+
+
+.evry h2 {
+    font-family: 'GalasFont', sans-serif;
+    font-size: 7rem;
+    text-align: left;
+    padding: 20px;
+    padding-bottom: 5px;
+    margin-top: 100px;
+    margin-left: 20px;
+    color: black;   
+}
+
+
+#fly {
+    width: 40%;
+    height: auto;
+    margin-top: 100px;
+}
+
+
+
+.not{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.not h2{
+    padding: 15px;
+    width:50%;
+    font-family: 'GalasFont', sans-serif;
+    font-size: 4rem;
+    text-align: left;
+    margin-top:425px;
+    margin-bottom: 155px;
+    color: black;
+}
+
+/* General Styling */
+.banner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0px 20px 0px 20px;
+    margin-top: -100px;
+}
+
+.card {
+    width: 95%;
+    height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: -70px;
+    gap: 20px;
+}
+
+.card div {
+    flex: 1;
+}
+
+.card1 {
+    font-family: 'teko';
+    text-align: justify;
+    width: 90%;
+    height: auto;
+    margin: 0;
+    font-size: 17px;
+    border: black solid 4px;
+    box-shadow: 5px 5px 7px  rgba(0, 0, 0, 0.485);
+    border-radius: 5px;
+} 
+
+/* .card1.show {
+    opacity: 1;
+    transform: translateY(0);
+} */
+
+.card1:hover {
+    box-shadow: 3px 3px 5px  rgba(0, 0, 0, 0.392);
+}
+
+.card1 h3 {
+    font-size: 25px;
+    padding: 5px;
+    margin-bottom: 0px;
+    color: black;
+}
+
+.img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: black solid 6px;
+    margin-bottom: 0px;
+}
+
+#btn-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color:black
+}
+
+
+.card1 p {
+    width: 100%;
+    padding: 7px;
+    margin-top: 0;
+    color: black;
+}
+
+.card1 .btn {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: black 5px solid;
+    border-radius: 5px;
+    font-family: 'teko';
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.card1 .btn:hover {
+    color: black;
+    background-color: white;
+    border: black 5px solid;
+    transition: background-color 0.5s ease;
+}
+
+/* .who, .alone, .text-container, #myself,.contact-cont { */
+    /* opacity: 0; */
+    /* transform: translateY(50px); */
+    /* transition: opacity 0.8s ease-out, transform 0.8s ease-out; */
+/* } */
+
+.resume-content{
+    opacity: 0;
+    transform: translateY(50px);
+    transition:opacity 0.95s ease-out,transform 0.95s ease-out;
+
+}
+.resume-content.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+/* When elements are visible */
+/* .show {
+    opacity: 1;
+    transform: translateY(0);
+} 
+
+/* Existing who section styles */
+/* .who {
+    margin-top: 300px;
+} */
+
+.alone {
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+}
+
+#myself {
+    text-align: center;
+    padding: 0;
+    margin-top: 325px;
+    width: 100%;
+    font-size: 4rem;
+    font-family: 'GalasFont', sans-serif;
+    color: black;
+}
+
+#person {
+    width: 350px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+    gap: 10px;
+}
+
+.text-container {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 50%;
+    text-align: justify;
+    display: block;
+    font-size: 1.5rem;
+    font-family: 'teko';
+    font-weight: lighter;
+    color: black;
+}
+
+#para1, #para2 {
+    margin-bottom: 25px;
+}
+
+.text-container .btn1 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    border: white solid;
+    font-family: 'teko';
+    display: inline-block;
+    padding: 5px 16px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+.btn1:hover{
+    background-color: white;
+    color: black;
+    border: black solid;
+    transition: background-color 0.5s ease;
+}
+.along{
+    display: flex;
+    gap: 20px;
+}
+
+.icons{
+    display: flex;
+    bottom:50px;
+    width: 50%;
+    /* justify-content: space-between; */
+    margin-left: 80px;
+
+} 
+.icons a{
+    padding: 20px;
+    margin-left: 20px;
+    color:black;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:60px;
+    height:60px;
+    background: transparent;
+    border:2px solid black;
+    font-size: 40px;
+    text-decoration: none;
+}
+.icons a:hover{
+    transform: scale(1.2);
+}
+.contact{
+    margin-top: 150px;
+    width: 100%;
+    font-family: sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+    color: black;
+}
+.contact h3{
+    margin-bottom:200px;
+    font-family: 'teko';
+    font-size: 4rem;
+    margin-left: 10px;
+}
+label{
+    display: block;
+    margin: 1rem 0;
+
+}
+
+.inputs{
+    font-size: 30px;
+    padding: 5px;
+    max-width: 70%;
+    max-height: auto;
+}
+
+#folow{
+    font-family: 'GalasFont', sans-serif;
+    font-size: 4rem;
+    color: black;
+    margin-top: 200px;
+    margin-left: 30px;
+}
+#sub{
+    width:100%
+}
+ #submit{
+    background-color: black;
+    width: 50%;
+    margin-top: 5px;
+    color:white;
+    font-family: 'teko';
+    font-size: 2rem;
+    border: white solid 6px;
+    padding:5px;
+    text-decoration: none;
+
+ }
+
+ .mybtn{
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: right;
+    margin-left: 70%;
+    
+
+    
+ }
+ .mybtn a{
+    text-decoration: none;
+    border: white solid 6px;
+    font-family: 'teko';
+    font-size: 30px;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    scroll-behavior: smooth;
+ }
+
+ #top:hover{
+    background-color: white;
+    color:black;
+    transition: background-color 0.5s ease;
+ }
+
+#submit:hover{
+    color: black;
+    background-color: white;
+    transition: background-color 0.5s ease;
+}
+footer {
+    font-family: 'teko';
+    margin-top: 100px;
+    text-align: center;
+    color: white;
+}
+
+.card-content a:hover{
+    background-color: white;
+    color:black;
+}
+.resume a{
+    text-decoration: none;
+    border: white solid 6px;
+    font-family: 'teko';
+    font-size: 30px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    
+}
+#my_resume{
+    font-family: 'teko', sans-serif;
+    font-size: 3rem;
+    color:#2980b9;
+    text-align: left;
+
+}
+#my_resume:hover{
+    color:white;
+    transition: 0.25ms;
+    cursor: pointer;
+}
+.Download-btn{
+    width: 100%;
+    display: flex;
+    margin-top: 80px;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    opacity: 0;
+    transform: translateY(80px);
+    transition:opacity 0.95s ease-out,transform 0.95s ease-out;
+
+}
+.Download-btn.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.d-btn:hover{
+    color: black;
+    background-color: white;
+    transition: background-color 0.5s ease;
+
+}
+.d-btn{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.submit{
+    margin-top:50px;
+    font-family: 'teko';
+    font-size: 5rem;
+    text-align: center;
+
+}
+.img_cont{
+    margin-top: 100px;
+}
+#tick-img{
+    width: 200px;
+    border-radius: 50%;
+}
+.resume-content{
+    padding: 10px;
+    font-family: teko;
+    width: 70%;
+    text-align: justify;
+}
+.resume-content h2{
+    margin-top: 50px;
+    margin-bottom: 0px;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.resume-content p{
+    font-size: 1.5rem;
+    font-weight: lighter;
+    padding: 20px;
+    
+}
+.resume-content li{
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin-left:30px;
+    padding: 5px;
+}
+.submit-container {
+    display: inline-block;
+    width: fit-content; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 120px;
+  }
+
+.submit {
+    text-align: center;
+    color: white;
+    font-family: 'teko';
+    display: inline-block;
+    overflow: hidden; /* Hides overflowing text */
+    border-right: 2px solid white; /* Cursor effect */
+    white-space: nowrap; /* Prevents wrapping */
+    width: 0; /* Initially hides all text */
+    animation: typing 4s steps(30, end) forwards, blink 0.5s step-end infinite;
+  }
+  
+  /* Typing animation */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%; /* Reveals full text */
+    }
+  }
+  
+  /* Blinking cursor animation */
+  @keyframes blink {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: white;
+    }
+  }
+  .wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  #back-image{
+    color:black;
+    background-color: white;
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+  }
+  .header a:hover{
+    transform: scale(1.2);
+
+  }
+
+  #resume-header{
+    text-decoration: none;
+    transform: none;
+  }
+.contact-cont img{
+    width: 450px;
+    height: 400px;
+}
+.contact-cont p{
+    font-size: 3rem;
+    font-family: 'teko';
+    text-align: justify;
+    gap: 10px;
+}
+.contact-cont{
+    margin-left: 150px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+
+#folow-cont{
+    font-family: 'GalasFont', sans-serif;
+    font-size: 4rem;
+    color: white;
+    margin-top: 300px;
+    margin-left: 30px;
+}
+#profile a{
+    text-decoration: none;
+} 
