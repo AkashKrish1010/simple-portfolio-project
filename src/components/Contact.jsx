@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Contact.css';
 import { Link } from 'react-router-dom';
-import profilePic from '../assets/pics/profile-user.png';
+import Navbar from './Navbar';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -53,21 +53,7 @@ const Contact = () => {
 
   return (
     <div>
-      <section className="header">
-        <div id="profile">
-          <img src={profilePic} alt="Profile" />
-          <Link to="/">
-            <h2 id="ak">AK</h2>
-          </Link>
-        </div>
-        <ul id="navbar">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/skills">Skills</Link></li>
-          <li><Link to="/projects">Projects</Link></li>
-          <li><Link to="/resume">Resume</Link></li>
-          <li><Link to="/contact" className="active">Contact</Link></li>
-        </ul>
-      </section>
+      <Navbar />
       
       <div className="contact-container">
       <div className="contact-header">

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Projects.css';
 import { Link } from 'react-router-dom';
-import profilePic from '../assets/pics/profile-user.png';
+import Navbar from './Navbar';
 
 const Projects = () => {
   const projectData = [
@@ -41,21 +41,7 @@ const Projects = () => {
 
   return (
     <div>
-      <section className="header">
-        <div id="profile">
-          <img src={profilePic} alt="Profile" />
-          <Link to="/">
-            <h2 id="ak">AK</h2>
-          </Link>
-        </div>
-        <ul id="navbar">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/skills">Skills</Link></li>
-          <li><Link to="/projects" className="active">Projects</Link></li>
-          <li><Link to="/resume">Resume</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-        </ul>
-      </section>
+      <Navbar />
       
       <div className="projects-container">
       <div className="projects-header">

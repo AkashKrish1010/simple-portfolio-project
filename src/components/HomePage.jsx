@@ -6,11 +6,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from 'react-router-dom';
 
 // Import local images
-import profilePic from "../assets/pics/profile-user.png";
 import butterflyPic from "../assets/pics/butterfly.png";
 import personPic from "../assets/pics/person.jpg";
 import Cards from "./Cards";
 import About from "./About";
+import Navbar from "./Navbar";
 
 // Component for the Home Page content
 const HomePage = () => {
@@ -19,8 +19,8 @@ const HomePage = () => {
     
     gsap.from(".card", {
       scrollTrigger: {
-        trigger: ".banner", // or any outer container
-        start: "top 50%",
+        trigger: ".not", // trigger when butterfly section is visible
+        start: "top 60%",
         toggleActions: "play reverse play reverse",
         
       },
@@ -107,19 +107,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <section className="header">
-        <div id="profile">
-          <img src={profilePic} alt="Profile" />
-          <Link to="/">
-            <h2 id="ak">AK</h2>
-          </Link>
-        </div>
-        <ul id="navbar">
-          <li><Link to="/" className="active">Home</Link></li>
-          <li><Link to="/resume">Resume</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-        </ul>
-      </section>
+      <Navbar />
 
       {/* About Section */}
       <div className="evry">

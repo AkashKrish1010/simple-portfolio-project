@@ -38,8 +38,8 @@ body::-webkit-scrollbar {
     justify-content: space-between;
     margin:0;
     font-family: 'teko';
-    padding:  20px 80px;
-    box-shadow: 0 4px  10px  rgba(0, 0, 0, 0.207);
+    padding: 15px 60px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     background-color:white;
     position: sticky;
     top: 0;
@@ -53,30 +53,30 @@ body::-webkit-scrollbar {
 
 #navbar li {
     list-style: none;
-    padding: 0 20px;
+    padding: 0 15px;
     font-family: 'teko';
     position: relative;
 }
 #navbar li a{
     text-decoration: none;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 700;
     color: black;   
     transition: 0.3s ease;
 }
 #navbar li a:hover{
-    color: #088178;
+    color: #2980b9;
 }
 #navbar li a:hover,#navbar li a.active{
-    color:#088178;
+    color:#2980b9;
 }
 #navbar li a.active::after,
 #navbar li a:hover::after{
     content: "";
     width: 30%;
     height: 2px;
-    left:20px;
-    background: black;
+    left:15px;
+    background: #2980b9;
     position: absolute;
     bottom: 1px;
 
@@ -89,21 +89,21 @@ body::-webkit-scrollbar {
 }
 
 #profile img{
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     background-color: white;
     padding: 3px;
     border-radius: 60%;
 }
 
 #ak:hover{
-    color: #088178;
+    color: #2980b9;
     cursor: pointer;
 }
 
 #ak {
     padding: 3px;
-    font-size: 25px;
+    font-size: 22px;
     color:black;
     transition: 0.3s ease;
     
@@ -670,4 +670,364 @@ footer {
 }
 #profile a{
     text-decoration: none;
-} 
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Header adjustments */
+    .header {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+
+    /* Show hamburger menu on mobile */
+    .hamburger {
+        display: flex;
+        order: 3;
+    }
+
+    /* Hide navbar by default on mobile */
+    #navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        padding: 20px 0;
+        z-index: 1000;
+    }
+
+    /* Show navbar when menu is open */
+    #navbar.nav-open {
+        display: flex;
+    }
+
+    #navbar li {
+        padding: 15px 20px;
+        text-align: center;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    #navbar li:last-child {
+        border-bottom: none;
+    }
+
+    #navbar li a {
+        font-size: 20px;
+        display: block;
+        width: 100%;
+    }
+
+    /* Profile section adjustments */
+    #profile {
+        width: auto;
+        gap: 15px;
+    }
+
+    #profile img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #ak {
+        font-size: 20px;
+    }
+
+    /* Main content adjustments - Better spacing and alignment */
+    .evry {
+        padding: 20px 10px;
+        margin-top: 20px;
+    }
+
+    .evry h2 {
+        font-size: 3rem;
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    #aksh {
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    #about {
+        width: 95%;
+        margin: 0 auto;
+        font-size: 1.6rem;
+        text-align: center;
+        padding: 20px 15px;
+        line-height: 1.4;
+    }
+
+    /* Career Foundation section - Better spacing */
+    .not {
+        padding: 20px 10px;
+        margin-top: 40px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .not h2 {
+        font-size: 2.5rem;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        text-align: center;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    #fly {
+        width: 50%;
+        max-width: 200px;
+        margin-top: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Cards section - Better spacing */
+    .banner {
+        flex-direction: column;
+        padding: 0 15px;
+        margin-top: 30px;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+        margin-top: 0;
+        height: auto;
+    }
+
+    .card1 {
+        width: 100%;
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+
+    .card1 h3 {
+        font-size: 22px;
+    }
+
+    .card1 p {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .card1 .btn {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    /* About section - Better mobile layout */
+    #myself {
+        font-size: 2.5rem;
+        margin-top: 80px;
+        padding: 0 20px;
+    }
+
+    .alone {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    #person {
+        width: 250px;
+        height: 350px;
+        margin-bottom: 30px;
+    }
+
+    .text-container {
+        width: 100%;
+        margin-left: 0;
+        font-size: 1.2rem;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .text-container .btn1 {
+        font-size: 1.3rem;
+        padding: 8px 20px;
+        margin-top: 20px;
+    }
+
+    /* Contact section - Better mobile spacing */
+    .contact {
+        flex-direction: column;
+        margin-top: 60px;
+        padding: 0 20px;
+    }
+
+    .contact h3 {
+        margin-bottom: 30px;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .inputs {
+        font-size: 16px;
+        max-width: 100%;
+        width: 100%;
+        padding: 12px;
+    }
+
+    #submit {
+        width: 100%;
+        font-size: 1.3rem;
+        padding: 12px;
+    }
+
+    /* Social icons - Better mobile layout */
+    .icons {
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+
+    .icons a {
+        width: 45px;
+        height: 45px;
+        font-size: 25px;
+        margin: 8px;
+    }
+
+    #folow {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 60px;
+        padding: 0 20px;
+    }
+
+    /* Contact content - Better mobile spacing */
+    .contact-cont {
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 60px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .contact-cont img {
+        width: 280px;
+        height: 220px;
+        margin-bottom: 20px;
+    }
+
+    .contact-cont p {
+        font-size: 1.6rem;
+        padding: 0 10px;
+    }
+
+    /* Resume content - Better mobile readability */
+    .resume-content {
+        width: 95%;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+    .resume-content h2 {
+        font-size: 1.6rem;
+        margin-top: 30px;
+    }
+
+    .resume-content p {
+        font-size: 1.1rem;
+        padding: 15px;
+        line-height: 1.5;
+    }
+
+    .resume-content li {
+        font-size: 1.1rem;
+        margin-left: 20px;
+        padding: 3px;
+    }
+
+    /* Back to top button - Better mobile positioning */
+    .mybtn {
+        margin-left: 0;
+        justify-content: center;
+        margin-top: 40px;
+        padding: 0 20px;
+    }
+
+    .mybtn a {
+        font-size: 18px;
+        padding: 12px 20px;
+    }
+
+    /* Footer - Better mobile spacing */
+    footer {
+        margin-top: 60px;
+        padding: 20px;
+        font-size: 14px;
+    }
+}
+
+/* Tablet responsive styles */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .header {
+        padding: 20px 40px;
+    }
+
+    .evry h2 {
+        font-size: 5rem;
+        margin-left: 20px;
+    }
+
+    #about {
+        width: 70%;
+        margin-left: 50px;
+        font-size: 2.2rem;
+    }
+
+    .banner {
+        padding: 0 20px;
+    }
+
+    .contact-cont {
+        margin-left: 50px;
+    }
+
+    .icons {
+        margin-left: 40px;
+    }
+}

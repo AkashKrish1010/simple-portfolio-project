@@ -1,26 +1,12 @@
 import React from 'react';
 import '../styles/Resume.css';
 import { Link } from 'react-router-dom';
-import profilePic from '../assets/pics/profile-user.png';
+import Navbar from './Navbar';
 
 const Resume = () => {
   return (
     <div>
-      <section className="header">
-        <div id="profile">
-          <img src={profilePic} alt="Profile" />
-          <Link to="/">
-            <h2 id="ak">AK</h2>
-          </Link>
-        </div>
-        <ul id="navbar">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/skills">Skills</Link></li>
-          <li><Link to="/projects">Projects</Link></li>
-          <li><Link to="/resume" className="active">Resume</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-        </ul>
-      </section>
+      <Navbar />
       
       <div className="resume-container">
       <div className="resume-header">
