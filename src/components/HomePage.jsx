@@ -19,8 +19,8 @@ const HomePage = () => {
     
     gsap.from(".card", {
       scrollTrigger: {
-        trigger: ".not", // trigger when butterfly section is visible
-        start: "top 60%",
+        trigger: ".banner", // or any outer container
+        start: "top 50%",
         toggleActions: "play reverse play reverse",
         
       },
