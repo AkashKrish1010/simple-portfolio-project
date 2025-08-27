@@ -10,12 +10,6 @@ A modern, responsive portfolio website showcasing my skills, projects, and exper
 - **Single Page Application** - Smooth navigation with React Router
 - **Interactive Animations** - Enhanced with GSAP animations
 - **Modern UI/UX** - Clean and professional design
-- **Multiple Sections**:
-  - 🏠 Home - Introduction and overview
-  - 🛠️ Skills - Technical skills and expertise
-  - 📁 Projects - Portfolio of work and achievements
-  - 📞 Contact - Get in touch information
-  - 📄 Resume - Professional background
 
 ## 🚀 Tech Stack
 
@@ -54,34 +48,6 @@ A modern, responsive portfolio website showcasing my skills, projects, and exper
    npm run preview
    ```
 
-## 📁 Project Structure
-
-```
-my-reactweb/
-├── public/
-│   ├── resume.pdf
-│   └── vite.svg
-├── src/
-│   ├── assets/
-│   ├── components/
-│   │   ├── HomePage.jsx
-│   │   ├── Skills.jsx
-│   │   ├── Projects.jsx
-│   │   ├── Contact.jsx
-│   │   ├── Resume.jsx
-│   │   └── ScrollToTop.jsx
-│   ├── styles/
-│   └── App.jsx
-├── package.json
-└── README.md
-```
-
-## 🎯 Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
 
 ## 🌟 Key Components
 
@@ -90,7 +56,6 @@ my-reactweb/
 - **Projects** - Portfolio projects display
 - **Contact** - Contact information and form
 - **Resume** - Professional resume section
-- **ScrollToTop** - Utility for smooth page navigation
 
 ## 📱 Responsive Design
 
